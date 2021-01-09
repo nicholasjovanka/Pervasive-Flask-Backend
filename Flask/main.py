@@ -58,7 +58,7 @@ def process_data(df):
     plt.xlabel("Number of Rotation")
     plt.ylabel("Angle")
     filepath ='./image/'+str(time.time())+'.png'
-    plt.savefig(filepath,dpi=1000)
+    plt.savefig(filepath,dpi=100)
     distance_traveled = (3.14 * 62 * Converted_CD['Rotation'].tolist()[-1])/100
     time_delta = (endTime - startTime)
     total_seconds = time_delta.total_seconds()
@@ -182,7 +182,7 @@ def recent():
     return jsonify(response)
 
 if __name__ == "__main__":
-   app.run()
+   app.run(debug=True,host='0.0.0.0')
 
 
 
