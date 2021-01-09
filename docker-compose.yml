@@ -1,7 +1,7 @@
 version : '3'
 services:
   flask_server:
-    build: ./Pervasive-Backend
+    build: ./Flask
   nginx:
     restart: always
     build: ./nginx
