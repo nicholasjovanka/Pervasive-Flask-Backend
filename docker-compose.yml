@@ -1,0 +1,10 @@
+version : '3'
+services:
+  flask_server:
+    build: ./Pervasive-Backend
+  nginx:
+    restart: always
+    build: ./nginx
+    command: [nginx-debug, '-g', 'daemon off;']
+    ports:
+      - '80:80'
